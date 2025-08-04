@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #1B3A6B 0%, #1e40af 50%, #1B3A6B 100%);
+  color: #1B3A6B;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1B3A6B;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-elna-blue hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .section-block {
+    @apply mb-8;
+  }
+  
+  /* Cards flotantes mejoradas */
+  .floating-card {
+    @apply bg-white rounded-3xl shadow-2xl border border-white/20 backdrop-blur-sm;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Efectos de hover para tarjetas */
+  .card-hover {
+    @apply transition-all duration-500 transform hover:scale-105 hover:shadow-2xl;
+  }
+  
+  /* Gradientes personalizados mejorados */
+  .gradient-elna {
+    background: linear-gradient(135deg, #1B3A6B 0%, #E94E8A 50%, #27AE60 100%);
+  }
+  
+  /* Animación del gradiente para el botón */
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Animación de brillo para el texto */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+  
+  .animate-shimmer {
+    background-size: 200% auto;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  /* Animación de entrada elegante para el título */
+  @keyframes titleSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+    }
+    50% {
+      opacity: 0.7;
+      transform: translateY(-5px) scale(1.02);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .animate-title-in {
+    animation: titleSlideIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+  
+  /* Animación de las líneas decorativas */
+  @keyframes lineExpand {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  
+  .animate-line-expand {
+    animation: lineExpand 1s ease-out forwards;
+  }
+  
+  /* Animación de zoom lento para el fondo */
+  @keyframes slow-zoom {
+    0% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .animate-slow-zoom {
+    animation: slow-zoom 20s ease-in-out infinite;
+  }
+  
+  /* Animación de gradiente shift */
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+  
+  /* Animación de rebote para el título */
+  @keyframes title-bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .animate-title-bounce {
+    animation: title-bounce 2s ease-in-out;
+  }
+  
+  /* Animación de letras individuales */
+  @keyframes letter-fade {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .animate-letter-fade {
+    animation: letter-fade 0.6s ease-out forwards;
+  }
+  
+  /* Animación de fade in up */
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+  
+  @keyframes pulse-border {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    20% { transform: scale(1.04); opacity: 0.97; }
+    40% { transform: scale(1.06); opacity: 0.92; }
+    60% { transform: scale(1.04); opacity: 0.97; }
+    80% { transform: scale(1); opacity: 1; }
+  }
+  .pulse-border {
+    animation: pulse-border 1.2s cubic-bezier(0.4,0,0.2,1) infinite;
+  }
+  
+  /* Tamaño de fondo para gradiente */
+  .bg-size-200 {
+    background-size: 200% 200%;
+  }
+  
+  /* Animación de saludo para el logo */
+  .animate-wave {
+    animation: wave 2s ease-in-out infinite;
+    transform-origin: bottom center;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Animaciones de entrada mejoradas */
+  .fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Confeti mejorado */
+  .confetti {
+    animation: confetti-fall 3s linear infinite;
+  }
+  
+  @keyframes confetti-fall {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Efectos de glassmorphism mejorados */
+  .glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Tipografía mejorada */
+  .text-hero {
+    @apply text-6xl md:text-8xl font-black tracking-tight;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .text-subtitle {
+    @apply text-2xl md:text-3xl font-bold tracking-wide;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+} 
