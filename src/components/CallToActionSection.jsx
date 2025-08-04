@@ -39,7 +39,7 @@ export default function CallToActionSection() {
               
               {/* Texto descriptivo */}
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed drop-shadow-md">
-                SOLO 10 CUPOS DISPONIBLES
+                CUPOS LIMITADOS
               </p>
               
               {/* Texto adicional */}

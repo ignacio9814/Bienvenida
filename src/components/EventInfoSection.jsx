@@ -232,7 +232,7 @@ export default function EventInfoSection() {
             
             {/* Texto descriptivo */}
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed drop-shadow-md">
-              ¡Estás a tiempo! Solo quedan 10 cupos disponibles. Una experiencia única donde desarrollarás tu liderazgo, conectarás con otros líderes y te convertirás en un agente de cambio.
+              ¡Estás a tiempo! Cupos limitados. Una experiencia única donde desarrollarás tu liderazgo, conectarás con otros líderes y te convertirás en un agente de cambio.
             </p>
             
             {/* Botones de acción */}
