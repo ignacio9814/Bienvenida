@@ -1,1 +1,5 @@
-/*    /index.html   200 
+/*    /index.html   200
+
+# Rutas específicas para React Router
+/secure    /index.html   200
+/direct    /index.html   200 
