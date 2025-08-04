@@ -2,7 +2,7 @@ import React from "react";
 
 export default function InvitationHero() {
   const openInstagram = () => {
-    window.open('https://www.instagram.com/accounts/login/?next=%2Felna.fundacion%2F&source=omni_redirect&hl=es', '_blank');
+    window.open('https://www.instagram.com/elna.fundacion?igsh=cG8yOTZ1NXkxNnAw', '_blank');
   };
 
   return (

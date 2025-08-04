@@ -4,7 +4,7 @@ export default function WhatToBringSection() {
   const videoRef = useRef(null);
   
   const openInstagram = () => {
-    window.open('https://www.instagram.com/accounts/login/?next=%2Felna.fundacion%2F&source=omni_redirect&hl=es', '_blank');
+    window.open('https://www.instagram.com/elna.fundacion?igsh=cG8yOTZ1NXkxNnAw', '_blank');
   };
   
   const items = [
@@ -43,48 +43,48 @@ export default function WhatToBringSection() {
   };
 
   return (
-    <section className="floating-card p-8 mb-8 fade-in">
+    <section className="floating-card p-4 sm:p-6 md:p-8 mb-6 sm:mb-8 fade-in">
       {/* Header de la sección */}
-      <div className="text-center mb-12">
-        <div className="inline-block mb-6">
-          <h3 className="text-4xl md:text-6xl font-black text-elna-blue mb-2">
+      <div className="text-center mb-8 sm:mb-12">
+        <div className="inline-block mb-4 sm:mb-6">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-elna-blue mb-2 leading-tight">
             ¿QUÉ DEBO LLEVAR?
           </h3>
-          <div className="w-full h-1 bg-gradient-to-r from-elna-green via-elna-yellow to-pink-500 rounded-full"></div>
+          <div className="w-full h-0.5 sm:h-1 bg-gradient-to-r from-elna-green via-elna-yellow to-pink-500 rounded-full"></div>
         </div>
-        <div className="flex items-center justify-center gap-4 mb-6">
-          <span className="text-2xl md:text-3xl font-black text-gray-600">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mb-4 sm:mb-6">
+          <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-gray-600">
             PARA TENER
           </span>
-          <span className="text-2xl md:text-3xl font-black text-elna-blue">
+          <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-elna-blue">
             EN CUENTA
           </span>
         </div>
-        <p className="text-lg md:text-xl text-gray-600 font-medium max-w-3xl mx-auto leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 font-medium max-w-sm sm:max-w-md md:max-w-lg lg:max-w-3xl mx-auto leading-relaxed">
           Organiza todo con anticipación para disfrutar al máximo de la experiencia ELNA INSPIRA
         </p>
       </div>
       
-      <div className="grid lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
         {/* Lista de elementos mejorada */}
-        <div className="space-y-6">
-          <h4 className="text-2xl font-black text-elna-blue mb-6 text-center">
+        <div className="space-y-4 sm:space-y-6">
+          <h4 className="text-lg sm:text-xl md:text-2xl font-black text-elna-blue mb-4 sm:mb-6 text-center leading-tight">
             📋 Lista de Elementos Esenciales
           </h4>
           
-          <div className="grid gap-4">
+          <div className="grid gap-3 sm:gap-4">
             {items.map((item, index) => (
               <div key={index} className="group">
-                <div className={`bg-gradient-to-r ${getCategoryColor(item.category)} rounded-2xl p-1 shadow-lg transition-all duration-300 group-hover:shadow-xl`}>
-                  <div className="bg-white rounded-xl p-6 flex items-center gap-6 hover:bg-gray-50 transition-all duration-300">
-                    <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                <div className={`bg-gradient-to-r ${getCategoryColor(item.category)} rounded-2xl p-0.5 sm:p-1 shadow-lg transition-all duration-300 group-hover:shadow-xl`}>
+                  <div className="bg-white rounded-xl p-3 sm:p-4 md:p-6 flex items-center gap-3 sm:gap-4 md:gap-6 hover:bg-gray-50 transition-all duration-300">
+                    <div className="text-2xl sm:text-3xl md:text-4xl group-hover:scale-110 transition-transform duration-300">
                       {item.icon}
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-black text-gray-800 text-lg mb-2">{item.name}</h4>
-                      <p className="text-sm text-gray-600 font-medium">{item.description}</p>
+                      <h4 className="font-black text-gray-800 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 leading-tight">{item.name}</h4>
+                      <p className="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">{item.description}</p>
                     </div>
-                    <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-elna-blue group-hover:text-white transition-all duration-300">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-elna-blue group-hover:text-white transition-all duration-300">
                       <span className="text-xs font-bold">{index + 1}</span>
                     </div>
                   </div>
@@ -95,87 +95,77 @@ export default function WhatToBringSection() {
         </div>
         
         {/* Video y información de elementos esenciales */}
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {/* Video de elementos */}
-          <div className="bg-gradient-to-br from-elna-blue to-blue-700 rounded-3xl p-8 text-white shadow-2xl">
-            <div className="text-center mb-6">
-              <div className="text-5xl mb-4">🎬</div>
-              <h4 className="text-2xl font-black mb-6 text-white">Guía Visual Completa</h4>
-            </div>
+          <div className="bg-gradient-to-br from-elna-blue to-blue-700 rounded-3xl p-4 sm:p-6 md:p-8 text-white shadow-2xl">
+            <h4 className="text-lg sm:text-xl md:text-2xl font-black mb-4 sm:mb-6 text-center leading-tight text-white">
+              🎥 Guía Visual Completa
+            </h4>
+            <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-center leading-relaxed">
+              Mirá este video para conocer todos los elementos que necesitarás durante toda la experiencia ELNA INSPIRA
+            </p>
             
-            {/* Video con mejor diseño */}
-            <div className="mb-6">
-              <div className="bg-gradient-to-r from-elna-green to-pink-500 rounded-2xl p-2 shadow-2xl">
-                <video
-                  ref={videoRef}
-                  className="w-full rounded-xl shadow-lg"
-                  controls
-                  autoPlay
-                  muted
-                  loop
-                >
-                  <source src="/elementos.mp4" type="video/mp4" />
-                  Tu navegador no soporta el elemento de video.
-                </video>
-              </div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <p className="text-base text-white/90 leading-relaxed">
-                Este video te muestra todos los elementos que necesitas para tener una experiencia completa y cómoda durante toda la experiencia ELNA INSPIRA.
-              </p>
+            <div className="bg-gradient-to-r from-elna-green to-pink-500 rounded-2xl p-1 sm:p-2 shadow-xl">
+              <video
+                ref={videoRef}
+                className="w-full rounded-xl shadow-lg"
+                controls
+                autoPlay
+                muted
+                loop
+              >
+                <source src="/elementos.mp4" type="video/mp4" />
+                Tu navegador no soporta el elemento de video.
+              </video>
             </div>
           </div>
           
-          {/* Tips y recomendaciones */}
-          <div className="bg-gradient-to-br from-elna-green to-green-600 rounded-3xl p-8 text-white shadow-2xl">
-            <div className="text-center mb-6">
-              <div className="text-5xl mb-4">💡</div>
-              <h4 className="text-2xl font-black mb-6">Tips y Recomendaciones</h4>
-            </div>
-            
-            <div className="space-y-4">
-              <div className="bg-white/20 rounded-2xl p-4">
-                <p className="text-sm font-bold">
-                  🎯 <strong>Organiza todo con anticipación</strong> para disfrutar al máximo de la experiencia.
+          {/* Información adicional */}
+          <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl">
+            <h4 className="text-lg sm:text-xl md:text-2xl font-black text-elna-blue mb-4 sm:mb-6 text-center leading-tight">
+              💡 Consejos Importantes
+            </h4>
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-elna-green rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-white font-black text-xs sm:text-sm">✓</span>
+                </div>
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  <strong>Empaca con anticipación:</strong> Revisa la lista con tiempo para no olvidar nada importante.
                 </p>
               </div>
-              <div className="bg-white/20 rounded-2xl p-4">
-                <p className="text-sm font-bold">
-                  📱 <strong>Mantén tu teléfono cargado</strong> para documentar los momentos especiales.
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-elna-green rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-white font-black text-xs sm:text-sm">✓</span>
+                </div>
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  <strong>Ropa cómoda:</strong> Prioriza la comodidad para las actividades dinámicas.
                 </p>
               </div>
-              <div className="bg-white/20 rounded-2xl p-4">
-                <p className="text-sm font-bold">
-                  🌟 <strong>Trae tu mejor energía</strong> y disposición para conectar con otros líderes.
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-elna-green rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-white font-black text-xs sm:text-sm">✓</span>
+                </div>
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  <strong>Documentación:</strong> No olvides tu DNI y documentos importantes.
                 </p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      
-      {/* Información adicional mejorada */}
-      <div className="mt-12 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-3xl p-8 shadow-2xl">
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
-              <span className="text-red-600 font-black text-xl">❓</span>
-            </div>
-            <h4 className="text-2xl font-black">¿Tenés dudas sobre qué llevar?</h4>
-          </div>
           
-          <p className="text-lg mb-8 leading-relaxed max-w-2xl mx-auto">
-            No te preocupes, también te enviaremos una lista detallada por WhatsApp antes del evento 
-            con todas las recomendaciones específicas para tu experiencia ELNA INSPIRA.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={openInstagram} className="bg-white text-red-600 font-black py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:bg-gray-100">
-              📧 Contactar para consultas
+          {/* Botones de contacto */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <button 
+              onClick={openInstagram}
+              className="bg-gradient-to-r from-elna-blue to-blue-700 text-white font-black py-3 sm:py-4 px-4 sm:px-6 rounded-full text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              Contactar para consultas
             </button>
-            <button onClick={openInstagram} className="border-2 border-white text-white font-black py-4 px-8 rounded-full text-lg hover:bg-white hover:text-red-600 transition-all duration-300">
-              📱 WhatsApp Directo
+            <button 
+              onClick={openInstagram}
+              className="bg-gradient-to-r from-elna-green to-green-700 text-white font-black py-3 sm:py-4 px-4 sm:px-6 rounded-full text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              WhatsApp Directo
             </button>
           </div>
         </div>

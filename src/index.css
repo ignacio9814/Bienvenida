@@ -274,4 +274,201 @@ h1, h2, h3, h4, h5, h6 {
     @apply text-2xl md:text-3xl font-bold tracking-wide;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   }
+  
+  /* Animaciones para el Portal/Agujero Negro */
+  @keyframes portal-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes portal-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes portal-suction {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(180deg);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+  
+  @keyframes particle-orbit {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateY(-300px) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translateY(-300px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes portal-expand {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes text-glow {
+    0%, 100% {
+      text-shadow: 0 0 20px rgba(27, 58, 107, 0.8);
+    }
+    50% {
+      text-shadow: 0 0 40px rgba(27, 58, 107, 1), 0 0 60px rgba(231, 78, 138, 0.8);
+    }
+  }
+  
+  .portal-spin {
+    animation: portal-spin 8s linear infinite;
+  }
+  
+  .portal-spin-reverse {
+    animation: portal-spin 6s linear infinite reverse;
+  }
+  
+  .portal-pulse {
+    animation: portal-pulse 2s ease-in-out infinite;
+  }
+  
+  .portal-suction {
+    animation: portal-suction 3s ease-in-out infinite;
+  }
+  
+  .particle-orbit {
+    animation: particle-orbit 4s linear infinite;
+  }
+  
+  .portal-expand {
+    animation: portal-expand 2s ease-out forwards;
+  }
+  
+  .text-glow {
+    animation: text-glow 3s ease-in-out infinite;
+  }
+  
+  /* Animaciones para el Logo que crece y explota */
+  @keyframes logo-explosion {
+    0% {
+      transform: scale(0.1) rotate(0deg);
+      opacity: 0;
+    }
+    20% {
+      transform: scale(0.5) rotate(180deg);
+      opacity: 0.5;
+    }
+    40% {
+      transform: scale(1) rotate(360deg);
+      opacity: 1;
+    }
+    60% {
+      transform: scale(1.5) rotate(540deg);
+      opacity: 1;
+    }
+    80% {
+      transform: scale(2) rotate(720deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(3) rotate(1080deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes explosion-particle {
+    0% {
+      transform: translate(-50%, -50%) scale(0) rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1) rotate(180deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(0) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes explosion-wave {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes explosion-light {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes welcome-text {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    70% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .logo-explosion {
+    width: 200px;
+    height: 200px;
+    animation: logo-explosion 3s ease-in-out forwards;
+  }
+  
+  .explosion-particle {
+    animation: explosion-particle 2s ease-out forwards;
+  }
+  
+  .explosion-wave {
+    animation: explosion-wave 2s ease-out forwards;
+  }
+  
+  .explosion-light {
+    animation: explosion-light 3s ease-in-out forwards;
+  }
+  
+  .welcome-text {
+    animation: welcome-text 3s ease-in-out forwards;
+  }
 } 
