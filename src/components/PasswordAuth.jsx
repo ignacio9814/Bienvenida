@@ -178,15 +178,15 @@ export default function PasswordAuth({ onAuthenticated }) {
               <label htmlFor="password" className="block text-white font-bold mb-2 text-sm sm:text-base">
                 Contraseña de Acceso
               </label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-white/20 border border-white/30 rounded-2xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-elna-blue focus:border-transparent transition-all duration-300 text-sm sm:text-base"
-                placeholder="Ingresa 'ELNA25' o 'elna25'"
-                autoFocus
-              />
+                             <input
+                 type="text"
+                 id="password"
+                 value={password}
+                 onChange={(e) => setPassword(e.target.value)}
+                 className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-white/20 border border-white/30 rounded-2xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-elna-blue focus:border-transparent transition-all duration-300 text-sm sm:text-base"
+                 placeholder="Ingresa 'ELNA25' o 'elna25'"
+                 autoFocus
+               />
             </div>
 
             {showError && (
